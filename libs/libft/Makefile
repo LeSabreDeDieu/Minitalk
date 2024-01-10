@@ -6,7 +6,7 @@
 #    By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 13:44:09 by sgabsi            #+#    #+#              #
-#    Updated: 2024/01/10 12:52:05 by sgabsi           ###   ########.fr        #
+#    Updated: 2024/01/10 13:09:26 by sgabsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ INCDIR		=	./includes
 OBJDIR		=	objs
 
 # Sources
-SRC_SUBDIRS	=	ft_is ft_lst ft_mem ft_put ft_str ft_to
+SRC_SUBDIRS	=	ft_is ft_lst ft_mem ft_put ft_str ft_to gnl
 SRC_FILES	=	ft_is/ft_isalnum.c ft_is/ft_isalpha.c ft_is/ft_isascii.c \
 				ft_is/ft_isdigit.c ft_is/ft_isprint.c \
 				ft_lst/ft_lstadd_back.c ft_lst/ft_lstadd_front.c \
@@ -40,7 +40,8 @@ SRC_FILES	=	ft_is/ft_isalnum.c ft_is/ft_isalpha.c ft_is/ft_isascii.c \
 				ft_str/ft_strnstr.c ft_str/ft_strrchr.c \
 				ft_str/ft_strtrim.c ft_str/ft_substr.c \
 				ft_to/ft_atoi.c ft_to/ft_itoa.c \
-				ft_to/ft_tolower.c ft_to/ft_toupper.c
+				ft_to/ft_tolower.c ft_to/ft_toupper.c \
+				gnl/get_next_line.c gnl/get_next_line_utils.c
 
 # Objects
 OBJ_SUBDIRS	=	$(SRC_SUBDIRS:%=$(OBJDIR)/%)
@@ -102,6 +103,7 @@ $(OBJDIR)/%.o: %.c
 
 clean:
 	@/bin/rm -rf $(OBJDIR)
+	@echo "$(YELLOW)********* Suppression des fichiers objets *********$(NC)"
 
 fclean: clean
 	@/bin/rm -f $(NAME)
