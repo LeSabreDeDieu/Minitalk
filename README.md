@@ -48,8 +48,6 @@ Pour compiler le projet, utilisez le fichier `Makefile` à la racine du projet. 
 
 ```bash
 make all
-```or```bash
-make re
 ```
 
 Cela générera les exécutables `client` et `serveur` dans le répertoire racine.
