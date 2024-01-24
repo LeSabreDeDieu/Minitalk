@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:50:41 by sgabsi            #+#    #+#             */
-/*   Updated: 2023/11/22 13:33:49 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/01/11 12:09:27 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,7 @@ int	ft_printstr(char *str)
 	else
 	{
 		while (str[i])
-		{	
-			ft_putchar_fd(str[i], 1);
-			i++;
-		}	
+			ft_putchar_fd(str[i++], 1);
 	}
 	return (i);
 }

@@ -6,13 +6,13 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 15:23:42 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/01/10 12:49:20 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/01/11 15:05:41 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-static int	g_confirm_flag = 0;
+int	g_confirm_flag = 0;
 
 void	ft_resp_handler(int signum)
 {
@@ -30,7 +30,7 @@ void	ft_send_bit(int pid, int bit)
 		signal = SIGUSR2;
 	if (kill(pid, signal) == -1)
 	{
-		ft_putstr_fd("Error", 2);
+		ft_putstr_fd("Erreur : Échec de l'envoi du signal\n", 2);
 		exit(EXIT_FAILURE);
 	}
 	while (!g_confirm_flag)
@@ -53,8 +53,11 @@ void	ft_send_char(int pid, unsigned char c)
 
 void	ft_send_string(int pid, const char *str)
 {
-	while (*str)
-		ft_send_char(pid, *str++);
+	int	i;
+
+	i = -1;
+	while (str[++i])
+		ft_send_char(pid, str[i]);
 	ft_send_char(pid, '\n');
 	ft_send_char(pid, '\0');
 }
@@ -65,13 +68,13 @@ int	main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		ft_putstr_fd("Usage: ./client [PID] [string]\n", 2);
+		ft_putstr_fd("\033[1;35mUsage: ./client [PID_SERVER] [MESSAGE]\033[0m\n", 2);
 		exit(EXIT_FAILURE);
 	}
 	pid = ft_atoi(argv[1]);
 	if (pid <= 0)
 	{
-		ft_putstr_fd("Invalid PID\n", 2);
+		ft_putstr_fd("PID invalide\n", 2);
 		exit(EXIT_FAILURE);
 	}
 	signal(SIGUSR2, ft_resp_handler);

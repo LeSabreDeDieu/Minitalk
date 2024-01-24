@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:48:24 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/01/10 13:31:14 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/01/11 14:19:37 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,14 @@ typedef struct s_list
 /**
  * @file libft.h
 
-	* @brief This file contains the declarations of various string and memory manipulation functions.
+	* @brief This file contains the declarations of various 
+	string and memory manipulation functions.
  */
 
 /**
 
-	* @brief Returns a pointer to the first occurrence of the character 'c' in the string 'str'.
+	* @brief Returns a pointer to the first occurrence of the 
+	character 'c' in the string 'str'.
  * @param str The string to search in.
  * @param c The character to search for.
  * @return A pointer to the first occurrence of 'c' in 'str',
@@ -55,7 +57,8 @@ char				*ft_strchr(const char *str, int c);
 
 /**
 
-	* @brief Returns a pointer to the last occurrence of the character 'c' in the string 'str'.
+	* @brief Returns a pointer to the last occurrence of the 
+	character 'c' in the string 'str'.
  * @param str The string to search in.
  * @param c The character to search for.
  * @return A pointer to the last occurrence of 'c' in 'str',
@@ -65,7 +68,8 @@ char				*ft_strrchr(const char *str, int c);
 
 /**
 
-	* @brief Locates the first occurrence of the string 'needle' in the string 'haystack' within the first 'len' characters.
+	* @brief Locates the first occurrence of the string 'needle' 
+	in the string 'haystack' within the first 'len' characters.
  * @param haystack The string to search in.
  * @param needle The string to search for.
  * @param len The maximum number of characters to search.
@@ -94,7 +98,8 @@ char				*ft_strjoin(char const *s1, char const *s2);
 
 /**
 
-	* @brief Trims the characters specified in 'set' from the beginning and end of the string 's1'.
+	* @brief Trims the characters specified in 'set' from the 
+	beginning and end of the string 's1'.
  * @param s1 The string to trim.
  * @param set The set of characters to trim.
  * @return The trimmed string, or NULL if the allocation fails.
@@ -103,7 +108,8 @@ char				*ft_strtrim(char const *s1, char const *set);
 
 /**
 
-	* @brief Applies the function 'f' to each character of the string 's' to create a new string.
+	* @brief Applies the function 'f' to each character of the 
+	string 's' to create a new string.
  * @param s The string to iterate over.
  * @param f The function to apply to each character.
  * @return The new string created by applying 'f' to each character,
@@ -113,7 +119,8 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
 
-	* @brief Splits the string 's' using the character 'c' as a delimiter and returns an array of strings.
+	* @brief Splits the string 's' using the character 'c' as a 
+	delimiter and returns an array of strings.
  * @param s The string to split.
  * @param c The delimiter character.
  * @return An array of strings resulting from the split,
@@ -214,7 +221,8 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
  * @param src The source string.
  * @param size The size of the destination buffer.
 
-	* @return The total length of the string that would have been copied if 'size' was large enough.
+	* @return The total length of the string that would have been 
+	copied if 'size' was large enough.
  */
 size_t				ft_strlcpy(char *dest, const char *src, size_t size);
 
@@ -224,7 +232,8 @@ size_t				ft_strlcpy(char *dest, const char *src, size_t size);
  * @param src The source string.
  * @param size The size of the destination buffer.
 
-	* @return The total length of the string that would have been created if 'size' was large enough.
+	* @return The total length of the string that would have been 
+	created if 'size' was large enough.
  */
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 
@@ -247,7 +256,8 @@ void				*ft_memset(void *s, int c, size_t n);
 
 /**
 
-	* @brief Locates the first occurrence of the character 'c' in the memory area 's'.
+	* @brief Locates the first occurrence of the character 'c' 
+	in the memory area 's'.
  * @param s The memory area to search in.
  * @param c The character to search for.
  * @param n The number of bytes to search.
@@ -291,7 +301,8 @@ void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 /**
 
-	* @brief Allocates memory for an array of 'count' elements of 'size' bytes each and returns a pointer to the allocated memory.
+	* @brief Allocates memory for an array of 'count' elements of 'size' 
+	bytes each and returns a pointer to the allocated memory.
  * @param count The number of elements to allocate.
  * @param size The size of each element.
  * @return A pointer to the allocated memory, or NULL if the allocation fails.
@@ -300,9 +311,11 @@ void				*ft_calloc(size_t count, size_t size);
 
 /**
 
-	* @brief Duplicates the string 's1' and returns a pointer to the duplicated string.
+	* @brief Duplicates the string 's1' and returns a 
+	pointer to the duplicated string.
  * @param s1 The string to duplicate.
- * @return A pointer to the duplicated string, or NULL if the allocation fails.
+ * @return A pointer to the duplicated string, or NULL 
+ * if the allocation fails.
  */
 char				*ft_strdup(const char *s1);
 
@@ -322,7 +335,8 @@ void				ft_putstr_fd(char *s, int fd);
 
 /**
 
-	* @brief Writes the string 's' followed by a newline character to the file descriptor 'fd'.
+	* @brief Writes the string 's' followed by a newline character to 
+	the file descriptor 'fd'.
  * @param s The string to write.
  * @param fd The file descriptor.
  */

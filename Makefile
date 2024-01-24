@@ -6,7 +6,7 @@
 #    By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 13:44:09 by sgabsi            #+#    #+#              #
-#    Updated: 2024/01/10 12:53:11 by sgabsi           ###   ########.fr        #
+#    Updated: 2024/01/15 09:54:44 by sgabsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ NAME			=	serveur client
 CC				=	cc
 CFLAGS			=	-Wall -Werror -Wextra -g3 -O3
 OPTIONS			=	-I $(INCDIR) -I $(LIBFT_DIR)/$(INCDIR) -I $(FTPRINTF_DIR)/$(INCDIR)
-LDFLAGS			=	-L $(LIBFT_DIR) -L $(FTPRINTF_DIR) -L $(MLX_DIR)
+LDFLAGS			=	-L$(LIBDIR) -L $(LIBFT_DIR) -L $(FTPRINTF_DIR) -L $(MLX_DIR) -lft -lftprintf
 
 # Colors
 GREEN			=	\033[0;32m
@@ -62,11 +62,11 @@ pre_comp:
 	@echo "$(YELLOW)********* Début de la compilation de Minitalk *********$(NC)"
 
 serveur: $(OBJDIR)/serveur/serveur.o $(LIBFT) $(FTPRINTF)
-	@$(CC) $(CFLAGS) $< $(LDFLAGS) -L$(LIBDIR) -lft -lftprintf -o $@
+	@$(CC) $(CFLAGS) $< $(LDFLAGS) -o $@
 	@echo "$(GREEN)********* Compilation de $@ terminée avec succès! *********$(NC)"
 
 client: $(OBJDIR)/client/client.o $(LIBFT) $(FTPRINTF)
-	@$(CC) $(CFLAGS) $< $(LDFLAGS) -L$(LIBDIR) -lft -lftprintf -o $@
+	@$(CC) $(CFLAGS) $< $(LDFLAGS) -o $@
 	@echo "$(GREEN)********* Compilation de $@ terminée avec succès! *********$(NC)"
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
