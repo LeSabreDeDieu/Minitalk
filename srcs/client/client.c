@@ -6,13 +6,13 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 15:23:42 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/01/11 15:05:41 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/03/12 09:16:54 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int	g_confirm_flag = 0;
+int		g_confirm_flag = 0;
 
 void	ft_resp_handler(int signum)
 {
@@ -68,7 +68,8 @@ int	main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		ft_putstr_fd("\033[1;35mUsage: ./client [PID_SERVER] [MESSAGE]\033[0m\n", 2);
+		ft_putstr_fd("\033[1;35mUsage: ./client [PID_SERVER] ", 2);
+		ft_putstr_fd("\033[1;35m[MESSAGE]\033[0m\n", 2);
 		exit(EXIT_FAILURE);
 	}
 	pid = ft_atoi(argv[1]);
