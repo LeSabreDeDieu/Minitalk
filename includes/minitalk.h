@@ -6,7 +6,7 @@
 /*   By: sgabsi <sgabsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 11:15:57 by sgabsi            #+#    #+#             */
-/*   Updated: 2024/01/10 12:23:55 by sgabsi           ###   ########.fr       */
+/*   Updated: 2024/03/19 10:51:23 by sgabsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdlib.h>
 # include <signal.h>
 # include "libft.h"
-# include "ft_printf.h"
 
 // Client
 void	ft_send_bit(int pid, int bit);
