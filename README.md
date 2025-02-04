@@ -1,16 +1,11 @@
-<h1 align="center">
-	42 Project - minitalk
-</h1>
+<p align="center">
+	<img src="https://github.com/ayogun/42-project-badges/blob/main/covers/cover-minitalk-bonus.png" alt="libft_cover" />
+</p>
 
 <p align="center">
 	<b><i>  </i></b>
 </p>
 
-<p align="center">
-	<img src="https://raw.githubusercontent.com/ayogun/42-project-badges/refs/heads/main/badges/minitalkm.png" alt="mimitalk_logo" />
-</p>
-
----
 <p align="center">
 	<img src="https://img.shields.io/badge/Score-125-darkgreen?style=none&logo=42" alt="Score project : 125"/>
 	<img alt="Static Badge" src="https://img.shields.io/badge/Outstanding-0-blue?style=none&logo=42">
