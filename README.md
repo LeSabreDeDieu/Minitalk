@@ -1,4 +1,21 @@
-# Minitalk-42
+<h1 align="center">
+	42 Project - minitalk
+</h1>
+
+<p align="center">
+	<b><i>  </i></b>
+</p>
+
+<p align="center">
+	<img src="https://raw.githubusercontent.com/ayogun/42-project-badges/refs/heads/main/badges/minitalkm.png" alt="mimitalk_logo" />
+</p>
+
+---
+<p align="center">
+	<img src="https://img.shields.io/badge/Score-125-darkgreen?style=none&logo=42" alt="Score project : 125"/>
+	<img alt="Static Badge" src="https://img.shields.io/badge/Outstanding-0-blue?style=none&logo=42">
+	<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/LeSabreDeDieu/Minitalk?style=none&logo=github">
+</p>
 
 ## Description
 Le projet Minitalk est une implémentation simple de la communication entre un client et un serveur en utilisant des signaux UNIX. Le client envoie un message au serveur en utilisant des signaux, et le serveur affiche ensuite le message reçu.
